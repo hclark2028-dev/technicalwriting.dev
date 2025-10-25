@@ -1,0 +1,75 @@
+[INFO] Running "same topic, different domain" experiment with customized task types
+[INFO] Results:
+[INFO] "Testing" (Angular) => 0.751456081867218
+[INFO] "Testing Services" (Angular) => 0.6292878985404968
+[INFO] "Background Processing Using Web Workers" (Angular) => 0.5090276598930359
+[INFO] "Testing Your Database" (Supabase) => 0.5084458589553833
+[INFO] "Refer To Locales By ID" (Angular) => 0.46428176760673523
+[INFO] "Test Your Application Locally" (CockroachDB) => 0.4586600363254547
+[INFO] "Writing Tests" (Playwright) => 0.4434031546115875
+[INFO] "JUnit" (Playwright) => 0.4156876802444458
+[INFO] "Actionability" (Playwright) => 0.396766722202301
+[INFO] "analysis_test" (Skylib) => 0.3869394063949585
+[INFO] "Testing Your Edge Functions" (Supabase) => 0.368389755487442
+[INFO] "diff_test" (Skylib) => 0.3524951934814453
+[INFO] "bzl_library" (Skylib) => 0.29295891523361206
+[INFO] "LINESTRING" (CockroachDB) => 0.2778087854385376
+[INFO] "Branching" (Supabase) => 0.26931506395339966
+[INFO] "Vector Columns" (Supabase) => 0.23397961258888245
+
+[INFO] Running "different topic, same domain" experiment with customized task types
+[INFO] Results:
+[INFO] "Vector Columns" (Supabase) => 0.6380605697631836
+[INFO] "Testing Your Database" (Supabase) => 0.44831225275993347
+[INFO] "LINESTRING" (CockroachDB) => 0.32693782448768616
+[INFO] "Background Processing Using Web Workers" (Angular) => 0.2737721800804138
+[INFO] "Testing Your Edge Functions" (Supabase) => 0.25883781909942627
+[INFO] "Branching" (Supabase) => 0.2509428560733795
+[INFO] "Refer To Locales By ID" (Angular) => 0.2328835278749466
+[INFO] "bzl_library" (Skylib) => 0.2133977860212326
+[INFO] "Test Your Application Locally" (CockroachDB) => 0.20613139867782593
+[INFO] "Testing" (Angular) => 0.16262517869472504
+[INFO] "Actionability" (Playwright) => 0.14792931079864502
+[INFO] "Writing Tests" (Playwright) => 0.14344163239002228
+[INFO] "Testing Services" (Angular) => 0.13723336160182953
+[INFO] "diff_test" (Skylib) => 0.12111848592758179
+[INFO] "JUnit" (Playwright) => 0.11599748581647873
+[INFO] "analysis_test" (Skylib) => 0.0979730486869812
+
+[INFO] Running "same topic, different domain" experiment with default task types
+[INFO] Results:
+[INFO] "Testing Your Database" (Supabase) => 0.6590374708175659
+[INFO] "Testing" (Angular) => 0.571465790271759
+[INFO] "Testing Services" (Angular) => 0.46747612953186035
+[INFO] "Test Your Application Locally" (CockroachDB) => 0.43749818205833435
+[INFO] "Testing Your Edge Functions" (Supabase) => 0.4073418378829956
+[INFO] "Writing Tests" (Playwright) => 0.3561333119869232
+[INFO] "Background Processing Using Web Workers" (Angular) => 0.3353777527809143
+[INFO] "Vector Columns" (Supabase) => 0.3085843324661255
+[INFO] "LINESTRING" (CockroachDB) => 0.30450767278671265
+[INFO] "Branching" (Supabase) => 0.29775649309158325
+[INFO] "analysis_test" (Skylib) => 0.2946781814098358
+[INFO] "Actionability" (Playwright) => 0.2879413962364197
+[INFO] "JUnit" (Playwright) => 0.2845016121864319
+[INFO] "Refer To Locales By ID" (Angular) => 0.2824022173881531
+[INFO] "diff_test" (Skylib) => 0.26220911741256714
+[INFO] "bzl_library" (Skylib) => 0.2447129189968109
+
+[INFO] Running "different topic, same domain" experiment with default task types
+[INFO] Results:
+[INFO] "Vector Columns" (Supabase) => 0.6698287129402161
+[INFO] "Testing Your Database" (Supabase) => 0.6086233854293823
+[INFO] "Testing Your Edge Functions" (Supabase) => 0.36533844470977783
+[INFO] "LINESTRING" (CockroachDB) => 0.34430524706840515
+[INFO] "Branching" (Supabase) => 0.3141021430492401
+[INFO] "Test Your Application Locally" (CockroachDB) => 0.29872700572013855
+[INFO] "Background Processing Using Web Workers" (Angular) => 0.28414368629455566
+[INFO] "bzl_library" (Skylib) => 0.26424312591552734
+[INFO] "Refer To Locales By ID" (Angular) => 0.2537899315357208
+[INFO] "Testing" (Angular) => 0.23542608320713043
+[INFO] "Writing Tests" (Playwright) => 0.22030793130397797
+[INFO] "Testing Services" (Angular) => 0.20675960183143616
+[INFO] "Actionability" (Playwright) => 0.1959698647260666
+[INFO] "diff_test" (Skylib) => 0.19095730781555176
+[INFO] "JUnit" (Playwright) => 0.1832783967256546
+[INFO] "analysis_test" (Skylib) => 0.15578024089336395

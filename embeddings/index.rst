@@ -18,6 +18,7 @@ impact on technical writing is **embeddings**. What embeddings offer to technica
    :maxdepth: 1
    :hidden:
 
+   arithmetic/index
    bookmarks
    tasks/index
    underrated
