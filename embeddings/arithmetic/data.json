@@ -1,0 +1,82 @@
+[
+  {
+    "domain": "Angular",
+    "topic": "Background Processing Using Web Workers",
+    "url": "https://raw.githubusercontent.com/angular/angular/refs/heads/main/adev/src/content/ecosystem/web-workers.md" 
+  },
+  {
+    "domain": "Angular",
+    "topic": "Refer To Locales By ID",
+    "url": "https://raw.githubusercontent.com/angular/angular/refs/heads/main/adev/src/content/guide/i18n/locale-id.md" 
+  },
+  {
+    "domain": "Angular",
+    "topic": "Testing",
+    "url": "https://raw.githubusercontent.com/angular/angular/refs/heads/main/adev/src/content/guide/testing/overview.md" 
+  },
+  {
+    "domain": "Angular",
+    "topic": "Testing Services",
+    "url": "https://raw.githubusercontent.com/angular/angular/refs/heads/main/adev/src/content/guide/testing/services.md" 
+  },
+  {
+    "domain": "CockroachDB",
+    "topic": "LINESTRING",
+    "url": "https://raw.githubusercontent.com/cockroachdb/docs/refs/heads/main/src/current/v25.4/linestring.md" 
+  },
+  {
+    "domain": "CockroachDB",
+    "topic": "Test Your Application Locally",
+    "url": "https://raw.githubusercontent.com/cockroachdb/docs/refs/heads/main/src/current/v25.4/local-testing.md" 
+  },
+  {
+    "domain": "Skylib",
+    "topic": "analysis_test",
+    "url": "https://raw.githubusercontent.com/bazelbuild/bazel-skylib/refs/heads/main/docs/analysis_test_doc.md"
+  },
+  {
+    "domain": "Skylib",
+    "topic": "bzl_library",
+    "url": "https://raw.githubusercontent.com/bazelbuild/bazel-skylib/refs/heads/main/docs/bzl_library.md"
+  },
+  {
+    "domain": "Skylib",
+    "topic": "diff_test",
+    "url": "https://raw.githubusercontent.com/bazelbuild/bazel-skylib/refs/heads/main/docs/diff_test_doc.md"
+  },
+  {
+    "domain": "Playwright",
+    "topic": "Actionability",
+    "url": "https://raw.githubusercontent.com/microsoft/playwright/refs/heads/main/docs/src/actionability.md"
+  },
+  {
+    "domain": "Playwright",
+    "topic": "JUnit",
+    "url": "https://raw.githubusercontent.com/microsoft/playwright/refs/heads/main/docs/src/junit-java.md"
+  },
+  {
+    "domain": "Playwright",
+    "topic": "Writing Tests",
+    "url": "https://raw.githubusercontent.com/microsoft/playwright/refs/heads/main/docs/src/writing-tests-java.md"
+  },
+  {
+    "domain": "Supabase",
+    "topic": "Branching",
+    "url": "https://raw.githubusercontent.com/supabase/supabase/refs/heads/master/apps/docs/content/guides/deployment/branching.mdx"
+  },
+  {
+    "domain": "Supabase",
+    "topic": "Testing Your Database",
+    "url": "https://raw.githubusercontent.com/supabase/supabase/refs/heads/master/apps/docs/content/guides/database/testing.mdx"
+  },
+  {
+    "domain": "Supabase",
+    "topic": "Testing Your Edge Functions",
+    "url": "https://raw.githubusercontent.com/supabase/supabase/refs/heads/master/apps/docs/content/guides/functions/unit-test.mdx"
+  },
+  {
+    "domain": "Supabase",
+    "topic": "Vector Columns",
+    "url": "https://raw.githubusercontent.com/supabase/supabase/refs/heads/master/apps/docs/content/guides/ai/vector-columns.mdx"
+  }
+]
