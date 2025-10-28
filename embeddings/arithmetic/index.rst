@@ -4,16 +4,17 @@
 word2vec-style vector arithmetic on docs embeddings
 ===================================================
 
-`word2vec`_ popularized the idea of representing words as `vectors`_
-where semantically similar words are positioned close to each other
-in the `vector space`_. Adding and subtracting vectors produces
+`word2vec`_ popularized the idea of representing words as `vectors`_ where
+semantically similar words are positioned close to each other in the `vector
+space`_. Nowadays these vectors are usually called `embeddings`_. A neat
+consequence of the word2vec architecture: adding and subtracting vectors produces
 semantically logical results:
 
   Using a word offset technique where simple algebraic operations are performed
-  on the word vectors, it was shown for example that ``vector("King") -
-  vector("Man") + vector("Woman")`` results in a vector that is closest to the
+  on the word vectors, it was shown for example that *vector("King")* -
+  vector("Man") + vector("Woman")* results in a vector that is closest to the
   vector representation of the word ``Queen``. — `Efficient Estimations of Word
-  Representations in Vector Space`_
+  Representations in Vector Space`_ (the word2vec paper)
 
 Does word2vec-style vector arithmetic work in technical writing contexts?
 
@@ -21,14 +22,21 @@ Does word2vec-style vector arithmetic work in technical writing contexts?
 Experiments
 -----------
 
+The word2vec family of models could only generate single-word vectors. I.e. each
+vector represented a single word. Nowadays, embedding models support any length of
+text input, up to the model's maximum input size. E.g. a vector might now represent
+a sentence, or paragraph, or even an entire document.
+
+In my experiments I'll be using `EmbeddingGemma`_.
+
 .. _arithmetic-domain:
 
 Same topic, different domain
 ============================
 
-Starting with the embedding for the full text of `Testing Your Database`_ from
-the Supabase docs, if I subtract the embedding for the word ``supabase``, and
-then add the embedding for the word ``angular``, the resultant embedding should
+Starting with the vector for the full text of `Testing Your Database`_ from
+the Supabase docs, if I subtract the vector for the word ``supabase``, and
+then add the vector for the word ``angular``, the resultant vector should
 be close to the concept of "testing in Angular".
 
 .. _arithmetic-topic:
@@ -36,10 +44,10 @@ be close to the concept of "testing in Angular".
 Different topic, same domain
 ============================
 
-Starting with the embedding for the full text of `Testing Your Database`_ from
+Starting with the vector for the full text of `Testing Your Database`_ from
 the Supabase docs, if I subtract the
-embedding for the word ``testing``, and then add the embedding for the word
-``vectors``, the resultant embedding should be similar to the concept of
+vector for the word ``testing``, and then add the vector for the word
+``vectors``, the resultant vector should be similar to the concept of
 "vectors in Supabase".
 
 ----------
@@ -55,13 +63,13 @@ once with default task types, and again with customized task types.
 Verification
 ------------
 
-There's no way to directly verify that the resultant embeddings are
+There's no way to directly verify that the resultant vectors are
 semantically close to the expected concepts. What I can do instead is generate
-embeddings from the full texts of various docs, and then compare the resultant
-embedding against the embeddings of these various docs using `cosine similarity`_.
-For the :ref:`arithmetic-domain` experiment I expect the resultant embedding
+vectors from the full texts of various docs, and then compare the resultant
+vector against the vectors of these various docs using `cosine similarity`_.
+For the :ref:`arithmetic-domain` experiment I expect the resultant vector
 to be most similar to `Testing`_ or `Testing Services`_ from the Angular docs.
-And for the :ref:`arithmetic-topic` experiment I expect the resultant embedding to
+And for the :ref:`arithmetic-topic` experiment I expect the resultant vector to
 be most similar to `Vector Columns`_ from the Supabase docs.
 
 Here's the full list of docs that are used in each experiment. They're all fairly short
@@ -90,16 +98,16 @@ Results
 -------
 
 In the :ref:`arithmetic-domain` experiment (start with the text of `Testing
-Your Database`_, then subtract the embedding for ``supabase``, then add the
-embedding for ``angular``) the resultant embedding is most similar to
+Your Database`_, then subtract the vector for ``supabase``, then add the
+vector for ``angular``) the resultant vector is most similar to
 `Testing`_ and `Testing Services`_ from the Angular docs, as expected, **when
 custom task types are enabled**. When using the default task types, the resultant
-embedding is most similar to `Testing Your Database`_ i.e. the doc that we
+vector is most similar to `Testing Your Database`_ i.e. the doc that we
 started with.
 
 In the :ref:`arithmetic-topic` experiment (start with the text of `Testing
-Your Database`_, then subtract the embedding for ``testing``, then add the
-embedding for ``vectors``) the resultant embedding is most similar to
+Your Database`_, then subtract the vector for ``testing``, then add the
+vector for ``vectors``) the resultant vector is most similar to
 `Vector Columns`_, as expected.
 
 These results suggest that yes, word2vec-style vector arithmetic can indeed
@@ -132,7 +140,9 @@ Logs
 .. _word2vec: https://en.wikipedia.org/wiki/Word2vec
 .. _vectors: https://en.wikipedia.org/wiki/Vector_(mathematics_and_physics)
 .. _vector space: https://en.wikipedia.org/wiki/Vector_space
+.. _embeddings: https://en.wikipedia.org/wiki/Embedding_(machine_learning)
 .. _Efficient Estimations of Word Representations in Vector Space: https://arxiv.org/pdf/1301.3781
+.. _EmbeddingGemma: https://arxiv.org/abs/2509.20354
 
 .. _Writing Tests: https://raw.githubusercontent.com/microsoft/playwright/refs/heads/main/docs/src/writing-tests-python.md
 .. _Wikipedia: https://en.wikipedia.org/wiki/Word2vec#Preservation_of_semantic_and_syntactic_relationships
