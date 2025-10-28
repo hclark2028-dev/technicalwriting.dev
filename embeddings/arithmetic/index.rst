@@ -1,33 +1,21 @@
 .. _arithmetic:
 
-====================================
-Vector arithmetic on docs embeddings
-====================================
+===================================================
+word2vec-style vector arithmetic on docs embeddings
+===================================================
 
-`Efficient Estimations of Word Representations in Vector Space`_ (the
-word2vec paper) uses vector arithmetic as evidence that their word embedding
-architecture can learn semantic relationships:
+`word2vec`_ popularized the idea of representing words as `vectors`_
+where semantically similar words are positioned close to each other
+in the `vector space`_. Adding and subtracting vectors produces
+semantically logical results:
 
   Using a word offset technique where simple algebraic operations are performed
   on the word vectors, it was shown for example that ``vector("King") -
   vector("Man") + vector("Woman")`` results in a vector that is closest to the
-  vector representation of the word ``Queen``.
-
-This technique has many applications. An example from `Wikipedia`_:
-
-  word2vec has been used to map a vector space of words in one language to a
-  vector space constructed from another language. Relationships between
-  translated words in both spaces can be used to assist with machine translation
-  of new words.
+  vector representation of the word ``Queen``. — `Efficient Estimations of Word
+  Representations in Vector Space`_
 
 Does word2vec-style vector arithmetic work in technical writing contexts?
-
------
-Goals
------
-
-I'm not sure how useful this technique is for technical writers. I'm just
-curious to find out whether it works.
 
 -----------
 Experiments
@@ -49,9 +37,10 @@ Different topic, same domain
 ============================
 
 Starting with the embedding for the full text of `Testing Your Database`_ from
-the Supabase docs, if I subtract the embedding for the word ``testing``, and
-then add the embedding for the word ``vectors``, the resultant embedding should
-be similar to the concept of "vectors in Supabase".
+the Supabase docs, if I subtract the
+embedding for the word ``testing``, and then add the embedding for the word
+``vectors``, the resultant embedding should be similar to the concept of
+"vectors in Supabase".
 
 ----------
 Task types
@@ -140,7 +129,11 @@ Logs
 
 .. literalinclude:: logs.txt
 
+.. _word2vec: https://en.wikipedia.org/wiki/Word2vec
+.. _vectors: https://en.wikipedia.org/wiki/Vector_(mathematics_and_physics)
+.. _vector space: https://en.wikipedia.org/wiki/Vector_space
 .. _Efficient Estimations of Word Representations in Vector Space: https://arxiv.org/pdf/1301.3781
+
 .. _Writing Tests: https://raw.githubusercontent.com/microsoft/playwright/refs/heads/main/docs/src/writing-tests-python.md
 .. _Wikipedia: https://en.wikipedia.org/wiki/Word2vec#Preservation_of_semantic_and_syntactic_relationships
 .. _Testing Your Database: https://raw.githubusercontent.com/supabase/supabase/refs/heads/master/apps/docs/content/guides/database/testing.mdx
