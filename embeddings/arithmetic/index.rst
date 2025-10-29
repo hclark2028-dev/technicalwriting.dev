@@ -22,17 +22,17 @@ Does word2vec-style vector arithmetic work in technical writing contexts?
 Experiments
 -----------
 
-word2vec was published in 2013. Embedding models have come a long way since then. word2vec models could only operate on single words. I.e. a vector always represented a single word. Modern embedding models can operate on any text, so long as the text fits in the model's `context window <https://www.ibm.com/think/topics/context-window>_. I.e. a vector can now represent a word, paragraph, section, document, set of documents, etc.
+word2vec was published in 2013. Embedding models have come a long way since then. word2vec models could only operate on single words. I.e. a vector always represented a single word. Modern embedding models can operate on any text, so long as the text fits in the model's `context window <https://www.ibm.com/think/topics/context-window>`_. I.e. a vector can now represent a word, paragraph, section, document, set of documents, etc.
 
 The following experiments all follow this basic pattern: 
 
-1. Start with the embedding of a full document.
+1. Start with the vector of a full document.
 
-2. Subtract the embedding of a single word.
+2. Subtract the vector of a single word.
 
-3. Add the embedding of a single word.
+3. Add the vector of a single word.
 
-I still don't really grok how it's possible to represent an entire document as a single embedding, let alone adding and subtracting a single-word embedding from a full-document embedding. But that will have to be a blog post for another day.
+I still don't really grok how it's possible to semantically represent an entire document as a single vector, let alone how adding and subtracting single-word vectors from full-document vectors works. But that will have to be a blog post for another day.
 
 .. _arithmetic-domain:
 
