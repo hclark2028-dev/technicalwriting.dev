@@ -22,12 +22,17 @@ Does word2vec-style vector arithmetic work in technical writing contexts?
 Experiments
 -----------
 
-The word2vec family of models could only generate single-word vectors. I.e. each
-vector represented a single word. Nowadays, embedding models support any length of
-text input, up to the model's maximum input size. E.g. a vector might now represent
-a sentence, or paragraph, or even an entire document.
+word2vec was published in 2013. Embedding models have come a long way since then. word2vec models could only operate on single words. I.e. a vector always represented a single word. Modern embedding models can operate on any text, so long as the text fits in the model's `context window <https://www.ibm.com/think/topics/context-window>_. I.e. a vector can now represent a word, paragraph, section, document, set of documents, etc.
 
-In my experiments I'll be using `EmbeddingGemma`_.
+The following experiments all follow this basic pattern: 
+
+1. Start with the embedding of a full document.
+
+2. Subtract the embedding of a single word.
+
+3. Add the embedding of a single word.
+
+I still don't really grok how it's possible to represent an entire document as a single embedding, let alone adding and subtracting a single-word embedding from a full-document embedding. But that will have to be a blog post for another day.
 
 .. _arithmetic-domain:
 
@@ -97,23 +102,19 @@ with chunking. Most of the docs revolve around testing.
 Results
 -------
 
-In the :ref:`arithmetic-domain` experiment (start with the text of `Testing
-Your Database`_, then subtract the vector for ``supabase``, then add the
-vector for ``angular``) the resultant vector is most similar to
+In the :ref:`arithmetic-domain` experiment (`Testing
+Your Database`_ - ``supabase`` + ``angular``) the resultant vector is most similar to
 `Testing`_ and `Testing Services`_ from the Angular docs, as expected, **when
 custom task types are enabled**. When using the default task types, the resultant
 vector is most similar to `Testing Your Database`_ i.e. the doc that we
 started with.
 
-In the :ref:`arithmetic-topic` experiment (start with the text of `Testing
-Your Database`_, then subtract the vector for ``testing``, then add the
-vector for ``vectors``) the resultant vector is most similar to
+In the :ref:`arithmetic-topic` experiment (`Testing
+Your Database`_ - ``testing`` + ``vectors``) the resultant vector is most similar to
 `Vector Columns`_, as expected.
 
-These results suggest that yes, word2vec-style vector arithmetic can indeed
+These preliminary results suggest that yes, word2vec-style vector arithmetic may indeed
 work in technical writing contexts.
-
-See :ref:`arithmetic-logs` for more details about the results.
 
 --------
 Appendix
