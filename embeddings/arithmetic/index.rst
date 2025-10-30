@@ -13,9 +13,9 @@ vectors produces semantically logical results. From `Efficient Estimations of
 Word Representations in Vector Space`_ (the word2vec paper):
 
   Using a word offset technique where simple algebraic operations are performed
-  on the word vectors, it was shown for example that *vector("King")* -
-  *vector("Man")* + *vector("Woman")* results in a vector that is closest to the
-  vector representation of the word *Queen*.
+  on the word vectors, it was shown for example that ``vector("King")`` -
+  ``vector("Man")`` + ``vector("Woman")`` results in a vector that is closest to the
+  vector representation of the word ``Queen``.
 
 Does word2vec-style vector arithmetic work in technical writing contexts?
 
