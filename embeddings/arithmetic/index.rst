@@ -69,10 +69,11 @@ once with default task types, and again with customized task types.
 Verification
 ------------
 
-There's no way to directly verify that the resultant vectors are
-semantically close to the expected concepts. What I can do instead is generate
-vectors from the full texts of various docs, and then compare the resultant
-vector against the vectors of these various docs using `cosine similarity`_.
+There's no way to directly verify that the resultant vectors are semantically
+close to the expected concepts. What I can do instead is generate vectors from
+the full texts of various docs, and then compare the resultant vectors from the
+experiments against the vectors of these various docs using `cosine
+similarity`_.
 
 Here's the full list of docs that I use in the experiments:
 
@@ -115,14 +116,14 @@ types are enabled**:
 
 .. literalinclude:: logs.txt
    :start-at: [INFO] Running "same topic, different domain" experiment with customized task types
-   :end-before: [INFO] Running "different topic, same domain" experiment with customized task types
+   :end-at: [INFO] "Vector Columns" (Supabase) => 0.23397961258888245
 
 When using the default task types, the resultant vector is most similar to
 `Testing Your Database`_ i.e. the doc that the experiment started with:
 
 .. literalinclude:: logs.txt
    :start-at: [INFO] Running "same topic, different domain" experiment with default task types
-   :end-before: [INFO] Running "different topic, same domain" experiment with default task types
+   :end-at: [INFO] "bzl_library" (Skylib) => 0.2447129189968109
 
 In the :ref:`arithmetic-topic` experiment (`Testing
 Your Database`_ - ``testing`` + ``vectors``) the resultant vector is most similar to
@@ -132,7 +133,7 @@ Custom task types:
 
 .. literalinclude:: logs.txt
    :start-at: [INFO] Running "different topic, same domain" experiment with customized task types
-   :end-before: [INFO] Running "same topic, different domain" experiment with default task types
+   :end-at: [INFO] "analysis_test" (Skylib) => 0.0979730486869812
 
 Default task types:
 
@@ -151,8 +152,9 @@ I still don't really understand how it's possible to semantically represent an
 entire document as a single vector, let alone how adding and subtracting
 single-word vectors from full-document vectors works.
 
-How do we actually incorporate this technique into technical writing workflows
-or documentation experiences? I haven't thought that far. 
+How do we actually use this in technical writing workflows or documentation
+experiences? I'm not sure. I was just curious to learn whether or not it would
+work.
 
 --------
 Appendix
