@@ -4,6 +4,8 @@
 word2vec-style vector arithmetic on docs embeddings
 ===================================================
 
+*2025 October 29*
+
 `word2vec`_ popularized the idea of representing words as `vectors`_ where
 semantically similar words are positioned close to each other in the `vector
 space`_. Nowadays these vectors are usually called `embeddings`_.
@@ -170,6 +172,11 @@ Source code
 ``data.json``:
 
 .. literalinclude:: data.json
+
+Note that I forgot to pin the URLs to specific commits. I.e. I used the
+``HEAD`` version of each URL. If you run the experiments a year or two from now
+(October 2025), your cosine similarity scores will probably be different,
+because the underlying text of the documents will probably have changed.
 
 .. _word2vec: https://en.wikipedia.org/wiki/Word2vec
 .. _vectors: https://en.wikipedia.org/wiki/Vector_(mathematics_and_physics)
