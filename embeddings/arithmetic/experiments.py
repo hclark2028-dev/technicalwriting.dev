@@ -95,9 +95,6 @@ def run_experiments():
         for doc in docs:
             print(f'[INFO] "{doc.topic}" ({doc.domain}) => {doc.similarity}')
         print()
-    # DEBUG
-    for d in init_docs(model, True):
-        print(f"* `{d.topic} <{d.url}`_ ({d.domain})")
 
 
 if __name__ == "__main__":
