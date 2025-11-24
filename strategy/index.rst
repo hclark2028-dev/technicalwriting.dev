@@ -17,3 +17,4 @@ Strategy
 
    challenges
    decisions
+   faq

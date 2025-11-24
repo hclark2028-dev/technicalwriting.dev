@@ -66,6 +66,7 @@ sphinx_docs_library(
         "sphinx/search.rst",
         "strategy/challenges.rst",
         "strategy/decisions.rst",
+        "strategy/faq.rst",
         "strategy/index.rst",
     ],
 )
