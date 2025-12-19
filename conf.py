@@ -17,7 +17,7 @@ exclude_patterns = [
     "MODULE.bazel.lock",
     "bazel-*",
     "bazelisk",
-    "dev.fish",
+    "local.fish",
     "ml/reviews/*.rst",
     "out",
     "requirements.lock",
@@ -29,8 +29,13 @@ extensions = [
     "sitemap",
     "sphinx.ext.mathjax",
     "sphinx_copybutton",
+    "sphinx_embeddings",
     "sphinx_reredirects",
 ]
+# TODO: Customize this depending on whether you're developing locally or
+# publishing to production.
+html_baseurl = "https://technicalwriting.dev"
+html_file_suffix = ".html"
 html_extra_path = [
     "rss.xml", 
 ]

@@ -16,4 +16,10 @@ end
 
 uv pip install -r requirements.txt
 
+if test -d "out"
+    rm -rf out
+end
+
 sphinx-build -b html . out
+
+deactivate
