@@ -15,13 +15,14 @@ exclude_patterns = [
     "BUILD.bazel",
     "MODULE.bazel",
     "MODULE.bazel.lock",
-    "bazel-bin",
-    "bazel-dev",
-    "bazel-out",
-    "bazel-testlogs",
+    "bazel-*",
     "bazelisk",
+    "dev.fish",
+    "ml/reviews/*.rst",
+    "out",
     "requirements.lock",
     "requirements.txt",
+    "venv"
 ]
 extensions = [
     "matplotlib.sphinxext.plot_directive",

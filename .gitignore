@@ -1,3 +1,6 @@
 .DS_Store
+.matplotlib
+__pycache__
 bazel-*
+out
 venv
