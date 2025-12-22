@@ -13,15 +13,21 @@ jobs:
       name: github-pages
       url: ${{steps.deployment.outputs.page_url}}
     runs-on: ubuntu-latest
+    env:
+      GEMINI_API_KEY: ${{secrets.GEMINI_API_KEY}}
     steps:
       - name: checkout
         uses: actions/checkout@v4
       - name: configure
         uses: actions/configure-pages@v5
-      - name: fish
-        run: sudo apt install -y fish
       - name: build
-        run: fish ${{github.workspace}}/build.fish
+        run: |
+          curl -LsSf https://astral.sh/uv/install.sh | sh
+          uv venv --python 3.12.12 ${{github.workspace}}/venv
+          . ${{github.workspace}}/venv/bin/activate.sh
+          uv pip install -r ${{github.workspace}}/requirements.txt
+          sphinx-build -b html ${{github.workspace}} ${{github.workspace}}/out
+          deactivate
       - name: upload
         uses: actions/upload-pages-artifact@v3
         with:
