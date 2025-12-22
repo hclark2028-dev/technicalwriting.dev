@@ -22,11 +22,12 @@ jobs:
         uses: actions/configure-pages@v5
       - name: build
         run: |
+          cd ${{github.workspace}}
           curl -LsSf https://astral.sh/uv/install.sh | sh
-          uv venv --python 3.12.12 ${{github.workspace}}/venv
-          . ${{github.workspace}}/venv/bin/activate.sh
-          uv pip install -r ${{github.workspace}}/requirements.txt
-          sphinx-build -b html ${{github.workspace}} ${{github.workspace}}/out
+          uv venv --python 3.12.12 venv
+          . venv/bin/activate.sh
+          uv pip install -r requirements.txt
+          sphinx-build -b html . out
           deactivate
       - name: upload
         uses: actions/upload-pages-artifact@v3
