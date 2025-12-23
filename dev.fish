@@ -14,7 +14,7 @@ if not string length -q "$VIRTUAL_ENV"
     . venv/bin/activate.fish
 end
 
-uv pip install -r requirements.txt
+uv pip install -r dev.txt
 
 if test -d "out"
     rm -rf out

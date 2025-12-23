@@ -1,0 +1,7 @@
+matplotlib==3.9.2
+networkx==3.4.2
+sphinx==8.2.3
+sphinx-copybutton==0.5.2
+-e ../sphinx-embeddings
+-e ../sphinx-embeddings[gemini]
+sphinx-reredirects==0.1.5
