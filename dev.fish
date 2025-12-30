@@ -20,6 +20,6 @@ if test -d "out"
     rm -rf out
 end
 
-sphinx-build -W -b html . out
+sphinx-build --exception-on-warning -b html . out
 
 deactivate
