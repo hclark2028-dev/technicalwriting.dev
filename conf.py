@@ -51,6 +51,7 @@ redirects = {
     "data/embeddings": "../embeddings/underrated.html",
     "data/intertwingularity": "../links/intertwingularity.html",
     "embeddings/overview": "./embeddings/underrated.html",
+    "embeddings/underrated": "https://web.archive.org/web/20251230174005/https://technicalwriting.dev/embeddings/underrated.html",
     "ml/embeddings/overview": "../embeddings/underrated.html",
     "ml/embeddings/tasks/index": "../embeddings/tasks/index.html",
     "ml/gn": "../automation/gn.html",
