@@ -47,13 +47,12 @@ Background
 ----------
 
 .. _PageRank: https://en.wikipedia.org/wiki/PageRank
-.. _backlinks: https://en.wikipedia.org/wiki/Backlink
 
 Short story long, I'm building a web crawler so that I can track how
 pages in my docs site link to each other and to the outside web more
 broadly. If a lot of my docs pages link to some particular page, then
 that page is probably important. `PageRank`_ Lite, basically, except
-with much more focus on intra-site `backlinks`_.
+with much more focus on intra-site backlinks.
 
 (Also, I'm building a web crawler because it's fun. Try it!)
 
@@ -186,7 +185,7 @@ Analyzing a real docs site
 --------------------------
 
 After quite a bit of sighing in frustration and muttering to myself I was able
-to fully crawl the docs site that I work on, `pigweed.dev <https://pigweed.dev>`_, and
+to fully crawl the docs site that I work on, `pigweed.dev`_, and
 I have to admit: the results are interesting. There were quite a few surprises.
 
 Here are the top 10 most load-bearing pages:

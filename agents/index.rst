@@ -84,8 +84,10 @@ agent is through a chat interface that's been bolted onto your CLI (e.g.
 ability to combine LLM capabilities with **tools** like web search and
 ``grep``.
 
-Example
-=======
+.. _agents-background-example:
+
+Agent workflow example
+======================
 
 Suppose that you need to understand the history of a file
 in your codebase. With a single prompt like this:
@@ -115,8 +117,8 @@ Agent docs are a way to get better results from the agents. Agent docs
 make the agent output more consistent, more aligned with your codebase
 conventions, and more accurate.
 
-Example
-=======
+Agent docs example
+==================
 
 When first trying out Claude Code (CC) on this website's repository, I
 instructed CC to build the site. CC searched through the codebase and made a
@@ -352,14 +354,12 @@ you to import other files.
 
 (Credit to Brandon Bloom for this idea.)
 
-IfThisThenThat
-==============
+Flag
+====
 
 `IfThisThenThat`_ is a presubmit tool that helps ensure that files stay synchronized
 with each other. You mark up two or more files with comments that indicate that if one
 file is changed, then the others should be changed as well.
-
-.. TODO: Add example.
 
 .. toctree::
    :hidden:

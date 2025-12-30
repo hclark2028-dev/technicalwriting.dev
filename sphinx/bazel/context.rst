@@ -186,8 +186,6 @@ an isolated sandbox so there's no need to also spin up a virtual environment.
 Sidecar friendly
 ================
 
-.. _sidecar: https://passo.uno/docs-as-code-topologies/#sidecar-docs-and-code-living-together
-
 In terms of docs-as-code topologies, a `sidecar`_ is when your docs live in the
 same repo as the rest of your source code. This is a powerful setup because it
 increases the chances that software engineers keep their docs up-to-date. In my

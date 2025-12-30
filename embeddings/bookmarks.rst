@@ -1,5 +1,3 @@
-.. _bookmarks:
-
 =========
 Bookmarks
 =========

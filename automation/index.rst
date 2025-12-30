@@ -1,5 +1,3 @@
-.. _automation:
-
 ==========
 Automation
 ==========

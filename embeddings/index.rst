@@ -1,12 +1,8 @@
-.. _embeddings:
-
 ==========
 Embeddings
 ==========
 
 :ref:`arithmetic`
-
-:ref:`underrated`
 
 :ref:`tasks`
 
@@ -17,4 +13,3 @@ Embeddings
    arithmetic/index
    bookmarks
    tasks/index
-   underrated

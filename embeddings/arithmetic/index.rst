@@ -201,5 +201,4 @@ because the underlying text of the documents will probably have changed.
 .. _Testing Your Edge Functions: https://raw.githubusercontent.com/supabase/supabase/refs/heads/master/apps/docs/content/guides/functions/unit-test.mdx
 .. _Vector Columns: https://raw.githubusercontent.com/supabase/supabase/refs/heads/master/apps/docs/content/guides/ai/vector-columns.mdx
 .. _Wikipedia: https://en.wikipedia.org/wiki/Word2vec#Preservation_of_semantic_and_syntactic_relationships
-.. _Testing Your Database: https://raw.githubusercontent.com/supabase/supabase/refs/heads/master/apps/docs/content/guides/database/testing.mdx
 .. _cosine similarity: https://p.migdal.pl/blog/2025/01/dont-use-cosine-similarity/

@@ -8,17 +8,17 @@ Field notes from the frontier of technical writing.
 
 Topics:
 
-* :ref:`agents`
+* :doc:`agents/index`
 
-* :ref:`analytics`
+* :doc:`analytics/index`
 
-* :ref:`embeddings`
+* :doc:`embeddings/index`
 
-* :ref:`links`
+* :doc:`links/index`
 
-* :ref:`sphinx`
+* :doc:`sphinx/index`
 
-* :ref:`strategy`
+* :doc:`strategy/index`
 
 .. toctree::
    :hidden:

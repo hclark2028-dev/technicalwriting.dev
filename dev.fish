@@ -20,6 +20,6 @@ if test -d "out"
     rm -rf out
 end
 
-sphinx-build -b html . out
+sphinx-build -W -b html . out
 
 deactivate
