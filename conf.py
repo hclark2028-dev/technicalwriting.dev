@@ -2,28 +2,29 @@ import pathlib
 import os
 import sys
 
-sys.path.append(str(pathlib.Path("_extensions").resolve()))
 
-os.environ["MPLCONFIGDIR"] = "./.matplotlib"
-
+# General
+project = "technicalwriting.dev"
+release = "0.0.0"
 author = "Kayce Basques"
 copyright = f"2025, {author}"
 exclude_patterns = [
     ".github",
     ".gitignore",
     "_extensions",
-    "BUILD.bazel",
-    "MODULE.bazel",
-    "MODULE.bazel.lock",
-    "bazel-*",
-    "bazelisk",
-    "local.fish",
+    "dev.fish",
     "ml/reviews/*.rst",
     "out",
     "requirements.lock",
     "requirements.txt",
     "venv"
 ]
+templates_path = ["_templates"]
+pygments_style = "github-dark"
+
+
+# Extensions
+sys.path.append(str(pathlib.Path("_extensions").resolve()))
 extensions = [
     "matplotlib.sphinxext.plot_directive",
     "sitemap",
@@ -32,6 +33,10 @@ extensions = [
     "sphinx_embeddings",
     "sphinx_reredirects",
 ]
+
+
+# HTMl
+html_theme = 'basic'
 # TODO: Customize this depending on whether you're developing locally or
 # publishing to production.
 html_baseurl = "https://technicalwriting.dev"
@@ -41,9 +46,6 @@ html_extra_path = [
 ]
 html_permalinks_icon = "§"
 html_static_path = ["_static"]
-html_theme = 'basic'
-project = "technicalwriting.dev"
-pygments_style = "github-dark"
 redirects = {
     "a11y/skip": "https://web.archive.org/web/20250225001215/https://technicalwriting.dev/a11y/skip.html",
     "ai/agents/index": "../agents/index.html",
@@ -66,8 +68,16 @@ redirects = {
     "ux/searchboxes": "https://web.archive.org/web/20250225002920/https://technicalwriting.dev/ux/searchboxes.html",
     "www/pdf": "../links/pdf.html",
 }
-release = "0.0.0"
-templates_path = ["_templates"]
+copybutton_prompt_text = "$ "
+
+
+# matplotlib
+os.environ["MPLCONFIGDIR"] = "./.matplotlib"
 # https://matplotlib.org/stable/api/sphinxext_plot_directive_api.html#configuration-options
 plot_html_show_formats = False
-copybutton_prompt_text = "$ "
+
+
+# sphinx-embeddings
+sphinx_embeddings_related = {
+    'ignore': ['agents/index', 'links/index', 'strategy/index']
+}
